@@ -69,3 +69,5 @@ adPartnerSchema.pre("save", async function (next) {
 adPartnerSchema.methods.passwordVerification = async function (Password) {
   return await bcrypt.compare(Password, this.Password);
 };
+
+module.exports = adPartnerSchema;

@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodmeon server.js"
+    "devStart": "nodemon server.js"
   },
+  "keywords": [],
   "author": "TaxiTop",
   "license": "ISC",
   "dependencies": {
@@ -25,6 +26,7 @@
     "mongoose": "^5.12.14",
     "morgan": "^1.10.0",
     "nodemailer": "^6.6.2",
+    "nodemon": "^2.0.7",
     "validator": "^13.6.0"
   }
 }
