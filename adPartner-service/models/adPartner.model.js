@@ -39,18 +39,27 @@ const adPartnerSchema = new Schema(
       enum: ["Company", "Agency"],
       required: [true, "Please Select Your Service"],
     },
+    Phone: {
+      type: String,
+      required: [true, "Please Enter a Phone Number"],
+      unique: true,
+    },
     Address: {
       Street: {
         type: String,
+        default: null,
       },
       City: {
         type: String,
+        default: null,
       },
       Country: {
         type: String,
+        default: null,
       },
       Pin: {
         type: String,
+        default: null,
       },
     },
   },
