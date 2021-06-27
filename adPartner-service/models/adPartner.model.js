@@ -34,6 +34,11 @@ const adPartnerSchema = new Schema(
       type: String,
       default: "advertisingPartner",
     },
+    Status: {
+      type: String,
+      default: "F",
+      required: true,
+    },
     ServiceProvider: {
       type: String,
       enum: ["Company", "Agency"],

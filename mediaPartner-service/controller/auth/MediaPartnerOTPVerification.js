@@ -3,8 +3,8 @@ const MediaPartnerModel = require("../../../Database/MediaPartner.Service.DB/med
 
 exports.OTPVerification = async (req, res) => {
   try {
-    const { OTP, user_ID } = req.body;
-    if (!OTP || !user_ID) {
+    const { OTP, userID } = req.body;
+    if (!OTP || !userID) {
       return res.json({ message: "Access Denied", status: false });
     }
     const isOTP = await MediaPartnerOTPModel.findOne({ OTP: OTP });
@@ -15,7 +15,7 @@ exports.OTPVerification = async (req, res) => {
           { $set: { Status: "A" } }
         );
         const updateMediaPartner = await MediaPartnerModel.updateOne(
-          { _id: user_ID },
+          { _id: userID },
           { $set: { Status: "A" } }
         );
         if (updateOTPStatus && updateMediaPartner) {
