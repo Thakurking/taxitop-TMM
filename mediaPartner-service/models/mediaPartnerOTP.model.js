@@ -10,7 +10,7 @@ const MediaPartnerOTPSchema = new Schema({
   OTP: {
     type: String,
     min: 4,
-    max: 4
+    max: 4,
     required: true,
   },
   Status: {
