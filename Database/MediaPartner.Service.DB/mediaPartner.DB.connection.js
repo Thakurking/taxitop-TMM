@@ -9,4 +9,5 @@ const mediaPartnerDB = mongoose.createConnection(
     useUnifiedTopology: true,
   }
 );
+console.log(mediaPartnerDB)
 module.exports = mediaPartnerDB;

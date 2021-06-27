@@ -1,8 +1,9 @@
-const advertismentPartnerDB = require("./advertismentPartner.DB.connection");
+const advertiserDB = require("./advertismentPartner.DB.connection");
 
-const advertismentPartnerModel = advertismentPartnerDB.model(
+const AdvertismentPartnerModel = advertiserDB.model(
   "advertismentPartner",
-  require("")
+  require("../../adPartner-service/models/adPartner.model")
 );
 
-module.exports = advertismentPartnerModel;
+module.exports = AdvertismentPartnerModel;
+console.log(AdvertismentPartnerModel);

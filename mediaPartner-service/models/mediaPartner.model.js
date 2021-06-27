@@ -34,6 +34,11 @@ const mediaPartnerSchema = new Schema(
       type: String,
       required: [true, "Give Business Owner Name or Concerned Person Name"],
     },
+    Phone: {
+      type: String,
+      unique: true,
+      required: [true, "Please Enter a Phone Number"],
+    },
     Role: {
       type: String,
       default: "mediaPartner",
