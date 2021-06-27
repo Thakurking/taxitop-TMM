@@ -43,6 +43,11 @@ const mediaPartnerSchema = new Schema(
       type: String,
       default: "mediaPartner",
     },
+    Status: {
+      type: String,
+      default: "F",
+      required: true,
+    },
     Media: [
       {
         type: "ObjectId",

@@ -13,6 +13,9 @@ exports.mongooseErrorHandler = async (err) => {
     if (err.keyPattern.BusinessName) {
       errors.BusinessName = "Business Name Exist Try Different Name";
     }
+    if (err.keyPattern.Phone) {
+      errors.Phone = "Phone Number Already Exist";
+    }
   }
   //Path Validation
   if (err.message.includes("advertismentPartner validation failed")) {

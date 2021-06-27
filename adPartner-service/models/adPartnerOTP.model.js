@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const MediaPartnerOTPSchema = new Schema({
+const adPartnerOTPSchema = new Schema({
   userID: {
     type: String,
     required: true,
@@ -10,7 +10,6 @@ const MediaPartnerOTPSchema = new Schema({
   OTP: {
     type: String,
     min: 4,
-    max: 4
     required: true,
   },
   Status: {
@@ -19,8 +18,8 @@ const MediaPartnerOTPSchema = new Schema({
   },
   UsedFor: {
     type: String,
-    default: "MediaPartnerVerification",
+    default: "adPartnerVerification",
   },
 });
 
-module.exports = MediaPartnerOTPSchema;
+module.exports = adPartnerOTPSchema;

@@ -15,7 +15,7 @@ exports.advertismentPartnerRegister = async (req, res) => {
     });
     console.log(Advertiser);
     return res.json({
-      Message: "Account Created Successfully",
+      message: "Account Created Successfully",
       status: true,
       Advertiser: Advertiser,
     });

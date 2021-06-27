@@ -4,6 +4,7 @@ const mediaRouter = express.Router();
 
 const mediaPartnerLoginController = require("../../controller/auth/mediaPartner.login.controller");
 const mediaPartnerRegisterController = require("../../controller/auth/mediaPartner.register.controller");
+const mediaPartnerOTPController = require("../../controller/auth/MediaPartnerOTPVerification");
 
 mediaRouter.post(
   "/media-partner-login",
@@ -13,4 +14,6 @@ mediaRouter.post(
   "/media-partner-register",
   mediaPartnerRegisterController.mediaPartnerRegister
 );
+mediaRouter.post("/verify-OTP", mediaPartnerOTPController.OTPVerification);
+
 module.exports = mediaRouter;

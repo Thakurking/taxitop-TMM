@@ -1,0 +1,14 @@
+{
+  "name": "taxitop-helper",
+  "version": "1.0.0",
+  "description": "TaxiTop Helper Component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TaxiTop",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^6.6.2"
+  }
+}

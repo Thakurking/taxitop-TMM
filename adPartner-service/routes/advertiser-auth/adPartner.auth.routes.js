@@ -1,11 +1,15 @@
 const express = require("express")
 const advertiserRouter = express.Router();
 
-const advertiserPartnerController = require("../../controller/auth/adPartner.register.controller");
+const advertiserPartnerRegisterController = require("../../controller/auth/adPartner.register.controller");
+const advertiserPartnerLoginController = require("../../controller/auth/adPartner.login.controller");
 
 advertiserRouter.post(
-  "/advertiserRegister",
-  advertiserPartnerController.advertismentPartnerRegister
+  "/advertiser-register",
+  advertiserPartnerRegisterController.advertismentPartnerRegister
 );
-
+advertiserRouter.post(
+  "/advertiser-login",
+  advertiserPartnerLoginController.advertismentPartnerLogin
+);
 module.exports = advertiserRouter;
