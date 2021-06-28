@@ -16,6 +16,8 @@ exports.mediaPartnerRegister = async (req, res) => {
       Phone,
     });
     console.log(MediaPartner);
+    if (!MediaPartner)
+      return res.json({ message: "Please Try Again", status: false });
     const OTP = await Math.floor(1000 + Math.random() * 9000);
     console.log(OTP);
     const MediaPartnerOTP = await MediaPartnerOTPModel.create({
@@ -23,15 +25,25 @@ exports.mediaPartnerRegister = async (req, res) => {
       userID: MediaPartner._id,
     });
     console.log(MediaPartnerOTP);
+    if (!MediaPartnerOTP)
+      return res.json({ message: "Please Try Again", status: false });
     const mailOption = {
       from: process.env.user,
       to: Email,
       subject: `TaxiTop Media Partner Verification`,
-      html: `<h1>Account Verification</h1><br><hr>
-            <br><a>Your OTP is: ${OTP}</a>`,
+      html: `<h1>Account Verification</h1>
+      <br>
+      <hr>
+      <p>Please click to the link below to activate your account</p>
+      <br>
+      <button>
+        <a href="http://localhost:5001/mediaPartner/verification?OTP=${OTP}&userID=${MediaPartner._id}">
+            Verify
+        </a>
+      </button>`,
     };
     const mail = await transporter.transporter.sendMail(mailOption);
-    if (MediaPartner && MediaPartnerOTP && mail) {
+    if (mail) {
       return res.json({
         message: "We have Sent You OTP in Your Mail Please Verify",
         status: true,
@@ -39,7 +51,7 @@ exports.mediaPartnerRegister = async (req, res) => {
         userID: MediaPartner._id,
       });
     } else {
-      return res.json({ message: "Internal Server Error", status: false });
+      return res.json({ message: "PLease Try Again", status: false });
     }
   } catch (error) {
     console.log(error);
