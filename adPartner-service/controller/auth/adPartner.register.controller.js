@@ -1,5 +1,6 @@
 const AdvertismentPartnerModel = require("../../../Database/AdvertismentPartner.Service.DB/advertismentPartnerSchema");
 const AdvertismentPartnerOTPModel = require("../../../Database/AdvertismentPartner.Service.DB/advertismentpartnerOTPSchema");
+
 const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
 
 const transporter = require("../../../Helper/Nodemailer/nodemailer.Helper");

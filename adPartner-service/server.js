@@ -1,17 +1,3 @@
-// const express = require("express");
-// const app = express();
-
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-
-// const advertiserRouter = require("./routes/advertiser-auth/adPartner.auth.routes");
-// app.use("/advertiserPartner", advertiserRouter);
-
-// const PORT = process.env.PORT || 5002;
-// app.listen(PORT, () => {
-//     console.log("server crashed");
-// })
-
 const express = require("express");
 const app = express();
 

@@ -14,7 +14,7 @@ const adPartnerSchema = new Schema(
     },
     Password: {
       type: String,
-      required: true,
+      required: [true, "Please Enter Password"],
       min: [6, "At Least 6 Characters Required, got {VALUE}"],
       match: [
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/,

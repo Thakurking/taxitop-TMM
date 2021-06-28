@@ -1,4 +1,4 @@
-const express = require("express")
+const express = require("express");
 const advertiserRouter = express.Router();
 
 const advertiserPartnerRegisterController = require("../../controller/auth/adPartner.register.controller");
