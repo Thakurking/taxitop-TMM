@@ -18,6 +18,8 @@ exports.advertismentPartnerRegister = async (req, res) => {
       Address,
     });
     console.log(Advertiser);
+    if (!Advertiser)
+      return res.json({ message: "Please Try Again", status: false });
     const OTP = await Math.floor(1000 + Math.random() * 9000);
     console.log(OTP);
     const AdvertismentPartnerOTP = await AdvertismentPartnerOTPModel.create({
@@ -25,15 +27,25 @@ exports.advertismentPartnerRegister = async (req, res) => {
       userID: Advertiser._id,
     });
     console.log(AdvertismentPartnerOTP);
+    if (!AdvertismentPartnerOTP)
+      return res.json({ message: "Please Try Again", status: false });
     const mailOption = {
       from: process.env.user,
       to: Email,
       subject: `TaxiTop Advertisment Partner Verification`,
-      html: `<h1>Account Verification</h1><br><hr>
-            <br><a>Your OTP is: ${OTP}</a>`,
+      html: `<h1>Account Verification</h1>
+      <br>
+      <hr>
+      <p>Please click to the link below to activate your account</p>
+      <br>
+      <button>
+        <a href="http://localhost:5002/advertiserPartner/verification?OTP=${OTP}&userID=${Advertiser._id}">
+            Verify
+        </a>
+      </button>`,
     };
     const mail = transporter.transporter.sendMail(mailOption);
-    if (MediaPartner && MediaPartnerOTP && mail) {
+    if (mail) {
       return res.json({
         message: "We have Sent You OTP in Your Mail Please Verify",
         status: true,
