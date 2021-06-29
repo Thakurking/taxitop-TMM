@@ -1,9 +1,10 @@
 const AdvertismentPartnerOTPModel = require("../../../Database/AdvertismentPartner.Service.DB/advertismentpartnerOTPSchema");
 const AdvertismentPartnerModel = require("../../../Database/AdvertismentPartner.Service.DB/advertismentPartnerSchema");
 
-module.exports = async (req, res) => {
+exports.OTPVerification = async (req, res) => {
   try {
-    const { OTP, userID } = req.body;
+    const OTP = req.params.OTP;
+    const userID = req.params.userID;
     if (!OTP || !userID) {
       return res.json({ message: "Access Denied", status: false });
     }
