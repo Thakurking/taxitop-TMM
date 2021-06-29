@@ -37,7 +37,9 @@ const mediaPartnerSchema = new Schema(
     Phone: {
       type: String,
       unique: true,
+      min: [10, "Wrong Phone Number"],
       required: [true, "Please Enter a Phone Number"],
+      validate: [validator.isMobilePhone, "Please Give Correct Number"],
     },
     Role: {
       type: String,
@@ -54,6 +56,11 @@ const mediaPartnerSchema = new Schema(
         ref: "media",
       },
     ],
+    // GSTnumber: {
+    //   type: String,
+    //   validate: [validator.isAlpha, "Please Write Correct GST Number"],
+    //   required: [true, "Please Give GST Number"],
+    // },
   },
   { timestamps: true }
 );

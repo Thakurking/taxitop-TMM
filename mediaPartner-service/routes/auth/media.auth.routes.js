@@ -14,6 +14,6 @@ mediaRouter.post(
   "/media-partner-register",
   mediaPartnerRegisterController.mediaPartnerRegister
 );
-mediaRouter.post("/verify-OTP", mediaPartnerOTPController.OTPVerification);
+mediaRouter.get("/verify-OTP/:OTP/:userID", mediaPartnerOTPController.OTPVerification);
 
 module.exports = mediaRouter;
