@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const validator = require("validator");
+const bcrypt = require("bcrypt");
 
 const Schema = mongoose.Schema;
 
@@ -28,5 +29,18 @@ const adminSchema = new Schema({
     ],
   },
 });
+
+adminSchema.pre("save", async function (next) {
+  if (!this.isModified("Password")) {
+    next();
+  }
+  const salt = await bcrypt.genSalt(10);
+  this.Password = await bcrypt.hash(this.Password, salt);
+  next();
+});
+
+adminSchema.methods.passwordVerification = async function (Password) {
+  return await bcrypt.compare(Password, this.Password);
+};
 
 module.exports = adminSchema;

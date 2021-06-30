@@ -7,8 +7,8 @@ const adminLoginController = require("../../controller/auth/admin.login.controll
 const adminRegisterController = require("../../controller/auth/admin.register.controller");
 
 AdminRouter.post("/admin-login", adminLoginController.adminLogin);
-AdminRouter.post(
-  `/${process.env.AdminCreateRoute}`,
+AdminRouter.get(
+  `/${process.env.AdminCreateRoute}/:Email/:Password`,
   adminRegisterController.adminRegister
 );
 
