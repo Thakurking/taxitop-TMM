@@ -3,7 +3,7 @@ exports.mongooseErrorHandler = async (err) => {
   //Duplicate Key Error
   if (err.code && err.code === 11000) {
     if (err.keyPattern.Email) {
-      errors.email = "Account Already Exist";
+      errors.Email = "Account Already Exist";
     }
     //Ad-Partner Errors
     if (err.keyPattern.OrganisationName) {
@@ -24,6 +24,17 @@ exports.mongooseErrorHandler = async (err) => {
     });
   }
   if (err.message.includes("mediaPartner validation failed")) {
+    Object.values(err.errors).forEach(({ properties }) => {
+      errors[properties.path] = properties.message;
+    });
+  }
+  if (err.message.includes("admin Vaidation failed")) {
+    Object.values(err.errors).forEach(({ properties }) => {
+      errors[properties.path] = properties.message;
+    });
+  }
+  //Update Validation
+  if (err.message.includes("Validation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {
       errors[properties.path] = properties.message;
     });

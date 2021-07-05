@@ -5,5 +5,5 @@ const AdvertismentPartnerModel = advertiserDB.model(
   require("../../adPartner-service/models/adPartner.model")
 );
 
-module.exports = AdvertismentPartnerModel;
 console.log(AdvertismentPartnerModel);
+module.exports = AdvertismentPartnerModel;
