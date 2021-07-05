@@ -18,7 +18,7 @@ const mediaPartnerSchema = new Schema(
       min: [6, "At Least 6 Characters Required, got {VALUE}"],
       match: [
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/,
-        "Password must contain a uppercse, digit, lowercase and a special character",
+        "Password must contain a uppercse, digit, lowercase and a special character and at least 6 Characters",
       ],
     },
     BusinessName: {
@@ -56,11 +56,11 @@ const mediaPartnerSchema = new Schema(
         ref: "media",
       },
     ],
-    // GSTnumber: {
-    //   type: String,
-    //   validate: [validator.isAlpha, "Please Write Correct GST Number"],
-    //   required: [true, "Please Give GST Number"],
-    // },
+    GSTnumber: {
+      type: String,
+      unique: true,
+      required: [true, "Please Give GST Number"],
+    },
   },
   { timestamps: true }
 );
@@ -77,5 +77,10 @@ mediaPartnerSchema.pre("save", async function (next) {
 mediaPartnerSchema.methods.passwordVerification = async function (Password) {
   return await bcrypt.compare(Password, this.Password);
 };
+
+mediaPartnerSchema.pre("updateOne", async function (next) {
+  this.options.runValidators = true;
+  next();
+});
 
 module.exports = mediaPartnerSchema;
