@@ -14,7 +14,7 @@ exports.adminLogin = async (req, res) => {
     );
     console.log(admin);
     if (!admin) {
-      return res.json({ message: "User Not Fond", status: false });
+      return res.json({ message: "Wrong Email", status: false });
     }
     const isPasswordVerified = await admin.passwordVerification(Password);
     console.log(isPasswordVerified);

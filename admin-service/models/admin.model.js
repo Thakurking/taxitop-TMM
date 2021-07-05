@@ -43,4 +43,9 @@ adminSchema.methods.passwordVerification = async function (Password) {
   return await bcrypt.compare(Password, this.Password);
 };
 
+adminSchema.pre("updateOne", async function (next) {
+  this.options.runValidators = true;
+  next();
+});
+
 module.exports = adminSchema;
