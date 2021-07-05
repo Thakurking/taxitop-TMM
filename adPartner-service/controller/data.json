@@ -1,0 +1,462 @@
+{
+  "filing": [],
+  "compliance": { "filingFrequency": null },
+  "taxpayerInfo": {
+    "dty": "Regular",
+    "stjCd": "GJ010",
+    "lgnm": "CENTRAL WAREHOUSING CORPORATION",
+    "ctb": "CORPORATION",
+    "adadr": [
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "KHUNJEJ TALUKA MAHUDHA",
+          "flno": "",
+          "pncd": "387001",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "",
+          "loc": "NADIAD",
+          "dst": "Kheda",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "TALUKA RAJULA",
+          "flno": "",
+          "pncd": "365560",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "PIPAVAV PORT",
+          "loc": "AMRELI",
+          "dst": "Amreli",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "VYARA",
+          "flno": "",
+          "pncd": "394651",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "DOST VADA VILLAGE",
+          "loc": "VYARA",
+          "dst": "Tapi",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "NEAR FCI COMPLEX, NH 8",
+          "flno": "",
+          "pncd": "382421",
+          "bno": "CONTAINER FREIGHT STATION",
+          "city": "",
+          "bnm": "AT POST ADALAJ",
+          "loc": "ADALAJ",
+          "dst": "Gandhinagar",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "VILLAGE JHAGADIA",
+          "flno": "",
+          "pncd": "393110",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "MS JHAGADIA COPPER LIMITED",
+          "loc": "JHAGADIA",
+          "dst": "Bharuch",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "KANDLA PORT",
+          "flno": "",
+          "pncd": "370210",
+          "bno": "CONTAINER FREIGHT STATION",
+          "city": "",
+          "bnm": "CWC 2 NEAR WEST GATE NO 1",
+          "loc": "KANDLA",
+          "dst": "Kachchh",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "MALIA HATINA",
+          "flno": "",
+          "pncd": "362245",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "",
+          "loc": "JUNAGADH",
+          "dst": "Junagadh",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "TALUKA RAJULA",
+          "flno": "",
+          "pncd": "365560",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "PIPAVAV PORT POST BOX NO 29",
+          "loc": "PIPAVAV PORT",
+          "dst": "Amreli",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "POPAT PARA",
+          "flno": "",
+          "pncd": "360001",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "BEDI NAKA BUILDING",
+          "loc": "RAJKOT",
+          "dst": "Rajkot",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "BEHIND NEW GRAIN MARKET YARD",
+          "flno": "",
+          "pncd": "360003",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "",
+          "loc": "RAJKOT",
+          "dst": "Rajkot",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "NANA VARCHHA ROAD GEETANJALI CINEMA",
+          "flno": "",
+          "pncd": "395006",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "",
+          "loc": "SURAT",
+          "dst": "Surat",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "VARACHHA ROAD",
+          "flno": "KAPADRA UNIT",
+          "pncd": "395006",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "NEAR G E BOARD OFFICE",
+          "loc": "SURAT",
+          "dst": "Surat",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "VADOD",
+          "flno": "",
+          "pncd": "394540",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "NEAR VADOD RAILWAY STATION",
+          "loc": "VADOD",
+          "dst": "Anand",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "VILLAGE JHAGADIA",
+          "flno": "",
+          "pncd": "393110",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "MS JHAGADIA COPPER LIMITED",
+          "loc": "JHAGADIA",
+          "dst": "Bharuch",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "OLD BYBDER ROAD P B NO 8",
+          "flno": "",
+          "pncd": "370421",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "CWC",
+          "loc": "MUNDRA",
+          "dst": "Kachchh",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "KUMBHARWADA TARNETAR ROAD",
+          "flno": "OPP FCI GODOWNS",
+          "pncd": "363530",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "SARVODAYA COLONY",
+          "loc": "THANGADH",
+          "dst": "Surendranagar",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "MALIA HATINA",
+          "flno": "",
+          "pncd": "362245",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "",
+          "loc": "JUNAGADH",
+          "dst": "Junagadh",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "KHUNJEJ TALUKA MAHUDHA",
+          "flno": "",
+          "pncd": "387001",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "",
+          "loc": "NADIAD",
+          "dst": "Kheda",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "TALUKA RAJULA",
+          "flno": "",
+          "pncd": "365560",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "PIPAVAV PORT",
+          "loc": "AMRELI",
+          "dst": "Amreli",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "VYARA",
+          "flno": "DOST VADA VILLAGE",
+          "pncd": "394651",
+          "bno": "CENTRAL WAREHOUSE",
+          "city": "",
+          "bnm": "",
+          "loc": "VYARA",
+          "dst": "Tapi",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "NH 8",
+          "flno": "NEAR FCI COMPLEX",
+          "pncd": "382421",
+          "bno": "CONTAINER FREIGHT STATION",
+          "city": "",
+          "bnm": "AT POST ADALAJ",
+          "loc": "ADALAJ",
+          "dst": "Gandhinagar",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "KANDLA PORT",
+          "flno": "",
+          "pncd": "370210",
+          "bno": "CONTAINER FREIGHT STATION",
+          "city": "",
+          "bnm": "NEAR WEST GATE NO 2",
+          "loc": "KANDLA",
+          "dst": "Kachchh",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "NH 8 NEAR INDRA COLONY",
+          "flno": "INLAND CLEARANCE DEPOT",
+          "pncd": "391740",
+          "bno": "INLAND CLEARANCE DEPOT",
+          "city": "",
+          "bnm": "GSWC COMPLEX OPP FERTILIZER NAGAR",
+          "loc": "DASHRATH",
+          "dst": "Vadodara",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "NEAR KANDLA SPECIAL ECONOMIC ZONE",
+          "flno": "",
+          "pncd": "370201",
+          "bno": "CONTAINER FREIGHT STATION",
+          "city": "",
+          "bnm": "CONTAINER FREIGHT STATION",
+          "loc": "GANDHIDHAM",
+          "dst": "Kachchh",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "KANDLA PORT",
+          "flno": "",
+          "pncd": "370210",
+          "bno": "CONTAINER FREIGHT STATION",
+          "city": "",
+          "bnm": "CWC 11 NEAR WEST GATE NO 1",
+          "loc": "KANDLA",
+          "dst": "Kachchh",
+          "lt": ""
+        }
+      },
+      {
+        "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+        "addr": {
+          "lg": "",
+          "stcd": "Gujarat",
+          "st": "GIDC",
+          "flno": "789/3",
+          "pncd": "396195",
+          "bno": "INLAND CLEARANCE DEPORT",
+          "city": "",
+          "bnm": "40 SHEDS",
+          "loc": "VAPI",
+          "dst": "Valsad",
+          "lt": ""
+        }
+      }
+    ],
+    "tradeNam": "CENTRAL WARE HOUSING CORP.LTD.",
+    "sts": "Active",
+    "nba": [
+      "Bonded Warehouse",
+      "Service Provision",
+      "Recipient of Goods or Services",
+      "Warehouse / Depot",
+      "Input Service Distributor (ISD)"
+    ],
+    "pradr": {
+      "ntr": "Bonded Warehouse, Service Provision, Recipient of Goods or Services, Warehouse / Depot, Input Service Distributor (ISD)",
+      "addr": {
+        "lg": "",
+        "stcd": "Gujarat",
+        "st": "MAHALAXMI CHAR RASTA",
+        "flno": "",
+        "pncd": "380007",
+        "bno": "CENTRAL WAREHOUSING CORPORATION",
+        "city": "",
+        "bnm": "",
+        "loc": "PALDI",
+        "dst": "Ahmedabad",
+        "lt": ""
+      }
+    },
+    "stj": "Ghatak 10 (Ahmedabad)",
+    "errorMsg": null,
+    "cxdt": "",
+    "gstin": "24AAACC1206D1ZM",
+    "ctj": "RANGE V",
+    "rgdt": "01/07/2017",
+    "ctjCd": "WS0705",
+    "frequencyType": "MONTHLY",
+    "panNo": "AAACC1206D"
+  }
+}

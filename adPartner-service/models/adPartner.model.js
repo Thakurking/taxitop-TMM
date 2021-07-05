@@ -18,7 +18,7 @@ const adPartnerSchema = new Schema(
       min: [6, "At Least 6 Characters Required, got {VALUE}"],
       match: [
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/,
-        "Password must contain a uppercse, digit, lowercase and a special character",
+        "Password must contain a uppercse, digit, lowercase and a special character and at least 6 Characters",
       ],
     },
     OrganisationName: {
@@ -46,6 +46,7 @@ const adPartnerSchema = new Schema(
     },
     Phone: {
       type: String,
+      min: [10, "Please Enter a Phone Number"],
       required: [true, "Please Enter a Phone Number"],
       unique: true,
     },
@@ -83,5 +84,10 @@ adPartnerSchema.pre("save", async function (next) {
 adPartnerSchema.methods.passwordVerification = async function (Password) {
   return await bcrypt.compare(Password, this.Password);
 };
+
+adPartnerSchema.pre("updateOne", async function (next) {
+  this.options.runValidators = true;
+  next();
+});
 
 module.exports = adPartnerSchema;

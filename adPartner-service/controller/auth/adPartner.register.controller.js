@@ -6,7 +6,7 @@ const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
 const nodemailer = require("nodemailer");
 
 exports.advertismentPartnerRegister = async (req, res) => {
-  const { Email, Password, OrganisationName, ServiceProvider, Address } =
+  const { Email, Password, OrganisationName, ServiceProvider, Address, Phone } =
     req.body;
   console.log(req.body);
   try {
@@ -16,6 +16,7 @@ exports.advertismentPartnerRegister = async (req, res) => {
       OrganisationName,
       ServiceProvider,
       Address,
+      Phone,
     });
     const OTP = await Math.floor(1000 + Math.random() * 9000);
     console.log(OTP);
@@ -28,9 +29,9 @@ exports.advertismentPartnerRegister = async (req, res) => {
     const mailOption = {
       from: process.env.user,
       to: Email,
-      subject: `TaxiTop Media Partner Verification`,
+      subject: `TaxiTop Advertisement Partner Verification`,
       html: `<h1>Account Verification</h1><br><hr><p>Please click to the link below to activate your account</p>
-      <br><button><a href="http://localhost:5001/advertiserPartner/verify-OTP/${OTP}/${Advertiser._id}">Activate</a></button>`,
+      <br><button><a href="http://localhost:5002/advertiserPartner/verify-advertiser-OTP/${OTP}/${Advertiser._id}">Activate</a></button>`,
     };
     let transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -49,8 +50,8 @@ exports.advertismentPartnerRegister = async (req, res) => {
       return res.json({
         message: "We have Sent You OTP in Your Mail Please Verify",
         status: true,
-        MediaPartner: MediaPartner,
-        userID: MediaPartner._id,
+        Advertiser: Advertiser,
+        userID: Advertiser._id,
       });
     }
   } catch (error) {
