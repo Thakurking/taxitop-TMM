@@ -19,6 +19,6 @@ mediaRouter.get(
   "/verify-media-OTP/:OTP/:userID",
   mediaPartnerOTPController.OTPVerification
 );
-mediaRouter.post("/change-password", mediaPartnerForgotPassword.forgotPassword);
+mediaRouter.put("/change-password", mediaPartnerForgotPassword.forgotPassword);
 
 module.exports = mediaRouter;
