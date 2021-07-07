@@ -4,14 +4,21 @@
   "description": "taxitop database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
   },
   "author": "taxitop",
   "license": "ISC",
   "dependencies": {
+    "boxen": "^4.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "figlet": "^1.5.0",
+    "helmet": "^4.6.0",
+    "http-errors": "^1.7.2",
     "mongoose": "^5.12.14",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.7"
   }
 }
