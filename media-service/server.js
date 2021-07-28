@@ -17,13 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 
 /**********CORS SETUP**********/
 const allowlist = [
-    "http://localhost:5000",
-    "http://localhost:5001",
-    "http://localhost:5002",
-    "http://localhost:5003",
-    "http://localhost:5004",
-    "http://localhost:5005",
-  ];
+  "http://localhost:5000",
+  "http://localhost:5001",
+  "http://localhost:5002",
+  "http://localhost:5003",
+  "http://localhost:5004",
+  "http://localhost:5005",
+];
 const corsOptionsDelegate = function (req, callback) {
   var corsOptions;
   if (allowlist.indexOf(req.header("Origin")) !== -1) {
@@ -41,9 +41,6 @@ app.use(helmet());
 app.use(cookieParser());
 app.use(morgan("dev"));
 /*********************************/
-
-// const mediaServiceRoute = require("");
-// app.use("/media-service", mediaServiceRoute);
 
 /**********HTTP-ERROR**********/
 app.use(async (req, res, next) => {
@@ -72,7 +69,7 @@ const server = app.listen(PORT, () => {
         margin: 0,
         borderStyle: "bold",
         borderColor: "yellowBright",
-        backgroundColor: "cyan",
+        backgroundColor: "blackBright",
       })
     );
   });
@@ -82,4 +79,3 @@ process.on("unhandledRejection", (err, promise) => {
   console.log(`Logged Error: ${err}`);
   server.close(() => process.exit(1));
 });
-/*************************************/
