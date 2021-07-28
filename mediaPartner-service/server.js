@@ -17,12 +17,12 @@ app.use(express.urlencoded({ extended: true }));
 
 /**********CORS SETUP**********/
 const allowlist = [
-  "http://localhost:3000",
   "http://localhost:5000",
   "http://localhost:5001",
   "http://localhost:5002",
   "http://localhost:5003",
   "http://localhost:5004",
+  "http://localhost:5005",
 ];
 const corsOptionsDelegate = function (req, callback) {
   var corsOptions;
@@ -59,7 +59,7 @@ app.use((req, res, next) => {
 const PORT = process.env.PORT || 5001;
 
 const server = app.listen(PORT, () => {
-  console.log(`Media Service Server Crashed On PORT ${PORT}`);
+  console.log(`Media Partner Service Server Crashed On PORT ${PORT}`);
   figlet("TAXITOP", {}, function (err, data) {
     if (err) {
       console.log("Something Went Wrong");
