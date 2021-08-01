@@ -46,7 +46,7 @@ const adPartnerSchema = new Schema(
     },
     Phone: {
       type: String,
-      min: [10, "Please Enter a Phone Number"],
+      min: [10, "Wrong Phone Number"],
       required: [true, "Please Enter a Phone Number"],
       unique: true,
     },
