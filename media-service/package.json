@@ -22,6 +22,8 @@
     "log-symbols": "^5.0.0",
     "mongoose": "^5.13.3",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.12"
+    "node-redis-pubsub": "^5.0.0",
+    "nodemon": "^2.0.12",
+    "validator": "^13.6.0"
   }
 }
