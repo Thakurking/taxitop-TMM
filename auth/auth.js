@@ -25,6 +25,12 @@ module.exports = async (req, res, next) => {
         req.isMediaPartner = payload.isMediaPartner;
         req.role = "mediaPartner";
         next();
+      }
+      if (payload.isAdmin && payload.admin) {
+        req.admin = payload.admin;
+        req.isAdmin = payload.isAdmin;
+        req.role = "admin";
+        next();
       } else {
         return res.json({ message: "User Not Verified", status: false });
       }
