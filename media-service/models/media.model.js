@@ -184,9 +184,9 @@ const mediaSchema = new Schema({
     type: String,
     required: [true, "Please Type Your Screen Restrictions"],
   },
-  Description: {
+  ScreenDescription: {
     type: String,
-    required: [true, "Please Type Description About Your Screen"],
+    required: [true, "Please Add Description About Your Screen"],
   },
   Ration: {
     male: String,
@@ -200,5 +200,4 @@ const mediaSchema = new Schema({
     },
   ],
 });
-
 module.exports = mediaSchema;
