@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
     } else if (file.mimetype === "image/png") {
       cb(null, shortID.generate() + "-" + filename);
     } else {
-      cb(null, "Something Went Wrong");
+      cb(null, new Error("Something Went Wrong"));
     }
   },
 });

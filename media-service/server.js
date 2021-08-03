@@ -42,6 +42,9 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 /*********************************/
 
+const mediaRouter = require("./routes/crud/media.crud.routes");
+app.use("/media", mediaRouter);
+
 /**********HTTP-ERROR**********/
 app.use(async (req, res, next) => {
   next(httpError.NotFound("PAGE NOT FOUND"));

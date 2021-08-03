@@ -6,7 +6,12 @@ const Schema = mongoose.Schema;
 const mediaSchema = new Schema({
   Owner: {
     type: "ObjectId",
-    ref: "mediaPartner",
+    ref: "onModel",
+  },
+  onModel: {
+    type: String,
+    required: true,
+    enum: ["mediaPartner", "advertismentPartner", "admin"],
   },
   ScreenTitle: {
     type: String,
@@ -117,21 +122,24 @@ const mediaSchema = new Schema({
         values: ["FlexibleOpen", "24/7Open"],
         message: "{VALUE} not supported",
       },
+      required: true,
     },
     DayAndTime: [
       {
         day: {
           type: String,
+          required: true,
         },
         from: {
           type: String,
+          required: true,
         },
         to: {
           type: String,
+          required: true,
         },
       },
     ],
-    required: true,
   },
   Price: {
     type: String,
@@ -189,9 +197,14 @@ const mediaSchema = new Schema({
     required: [true, "Please Add Description About Your Screen"],
   },
   Ratio: {
-    male: String,
-    female: String,
-    required: [true, "Please Enter Male Female Ration"],
+    male: {
+      type: Number,
+      required: true,
+    },
+    female: {
+      type: Number,
+      required: true,
+    },
   },
   Images: [
     {
