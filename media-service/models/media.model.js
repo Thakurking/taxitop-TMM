@@ -188,13 +188,14 @@ const mediaSchema = new Schema({
     type: String,
     required: [true, "Please Add Description About Your Screen"],
   },
-  Ration: {
+  Ratio: {
     male: String,
     female: String,
     required: [true, "Please Enter Male Female Ration"],
   },
   Images: [
     {
+      data: Buffer,
       type: String,
       required: [true, "Please Select An Image"],
     },
