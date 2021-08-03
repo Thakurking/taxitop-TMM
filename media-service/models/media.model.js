@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const mediaSchema = new Schema({
   Owner: {
     type: "ObjectId",
-    ref: "onModel",
+    refPath: "onModel",
   },
   onModel: {
     type: String,
