@@ -7,6 +7,6 @@ const nrp = new NRP({
 
 exports.createMedia = async (req, res) => {
   try {
-      const {} = req.body;
+    const {} = req.body;
   } catch (error) {}
 };
