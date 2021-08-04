@@ -227,6 +227,11 @@ const mediaSchema = new Schema(
     },
     Status: {
       type: String,
+      enum: {
+        values: ["A", "D"],
+        message: "{VALUE} is Not Supported",
+      },
+      required: true,
       default: "A",
     },
   },
