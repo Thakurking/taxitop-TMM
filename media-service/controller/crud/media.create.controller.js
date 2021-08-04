@@ -7,6 +7,12 @@ exports.mediaCreate = async (req, res) => {
     // console.log(mediaData);
     const saveMedia = await MediaModel.create(mediaData);
     console.log(saveMedia);
+    if (saveMedia) {
+      return res.json({ message: "Media Saved Successfully", status: true });
+    }
+    /**
+     * media owner reference to mediaPartner model
+     */
     // const findMediaOwner = await MediaModel.findOne({
     //   _id: "610a461accffc3277e07aa05",
     // }).populate("Owner", "Name Email", AdminModel);

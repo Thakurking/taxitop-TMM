@@ -216,7 +216,16 @@ const mediaSchema = new Schema(
     ],
     OtherScreenDescription: {
       type: String,
-      default: false,
+      default: "Screen For Rent",
+    },
+    Email: {
+      type: String,
+      required: [true, "Please Give Email"],
+      validate: [validator.isEmail, "Please Give Correct Email"],
+    },
+    Status: {
+      type: String,
+      default: "A",
     },
   },
   { timestamps: true }
