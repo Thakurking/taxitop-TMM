@@ -4,14 +4,20 @@ const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
 exports.mediaCreate = async (req, res) => {
   const mediaData = req.body;
   try {
-    // console.log(mediaData);
-    const saveMedia = await MediaModel.create(mediaData);
-    console.log(saveMedia);
-    if (saveMedia) {
-      return res.json({
-        message: "Your Media Saved Successfully",
-        status: true,
-      });
+    if (req.mediaPartner || req.admin) {
+      console.log(mediaData);
+      mediaData.Owner = req.user;
+      mediaData.onModel = req.role;
+      const saveMedia = await MediaModel.create(mediaData);
+      console.log(saveMedia);
+      if (saveMedia) {
+        return res.json({
+          message: "Your Media Saved Successfully",
+          status: true,
+        });
+      }
+    } else {
+      return res.json({ message: "Access Denied", status: false });
     }
     /**
      * media owner reference to mediaPartner model example
