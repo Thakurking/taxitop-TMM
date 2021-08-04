@@ -161,7 +161,7 @@ const mediaSchema = new Schema(
       type: String,
       enum: {
         values: ["TV-Screen", "LED-Billboard"],
-        message: "{VALUES} is Not Supported",
+        message: "{VALUE} is Not Supported",
       },
       required: [true, "Please Select Screen Type"],
     },
