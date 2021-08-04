@@ -48,7 +48,7 @@ const mediaPartnerSchema = new Schema(
     },
     Media: [
       {
-        type: "ObjectId",
+        type: Schema.Types.ObjectId,
         ref: "media",
       },
     ],

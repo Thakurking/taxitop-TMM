@@ -6,23 +6,22 @@ const Schema = mongoose.Schema;
 const mediaSchema = new Schema(
   {
     Owner: {
-      type: "ObjectId",
+      type: Schema.Types.ObjectId,
+      required: true,
       refPath: "onModel",
     },
     onModel: {
       type: String,
       required: true,
-      enum: ["mediaPartner", "advertismentPartner", "admin"],
+      enum: ["mediaPartner", "admin"],
     },
     ScreenTitle: {
       type: String,
       required: [true, "Please Give Your Screen A Title"],
-      validate: [validator.isAlphanumeric, "Please Enter Alpha Numeric Value"],
     },
     BusinessName: {
       type: String,
       required: [true, "Please Give Your Business Name"],
-      validate: [validator.isAlpha, "Please Enter Only Alphabet Character"],
     },
     TouchPoint: {
       type: String,
@@ -53,6 +52,7 @@ const mediaSchema = new Schema(
           "Retail",
           "Store",
           "Supermart",
+          "Others",
         ],
         message: "{VALUE} is not supported",
       },
@@ -214,6 +214,10 @@ const mediaSchema = new Schema(
         required: [true, "Please Select An Image"],
       },
     ],
+    OtherScreenDescription: {
+      type: String,
+      default: false,
+    },
   },
   { timestamps: true }
 );
