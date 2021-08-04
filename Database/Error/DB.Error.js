@@ -39,7 +39,7 @@ exports.mongooseErrorHandler = async (err) => {
     });
   }
   //Update Validation
-  if (err.message.includes("validation failed")) {
+  if (err.message.includes("Validation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {
       errors[properties.path] = properties.message;
     });
