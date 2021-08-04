@@ -8,10 +8,13 @@ exports.mediaCreate = async (req, res) => {
     const saveMedia = await MediaModel.create(mediaData);
     console.log(saveMedia);
     if (saveMedia) {
-      return res.json({ message: "Media Saved Successfully", status: true });
+      return res.json({
+        message: "Your Media Saved Successfully",
+        status: true,
+      });
     }
     /**
-     * media owner reference to mediaPartner model
+     * media owner reference to mediaPartner model example
      */
     // const findMediaOwner = await MediaModel.findOne({
     //   _id: "610a461accffc3277e07aa05",
@@ -23,7 +26,12 @@ exports.mediaCreate = async (req, res) => {
     // console.log(findMedia);
   } catch (error) {
     console.log(error);
+    console.log(error.errors);
     const errors = await mongooseErrorHandler(error);
-    return res.json({ errors });
+    if (errors) {
+      return res.json({ errors });
+    } else {
+      return res.json({ message: "Internal Server Error", status: false });
+    }
   }
 };
