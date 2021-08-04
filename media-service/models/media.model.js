@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 
 const mediaSchema = new Schema(
   {
+    /////////////////////////////////////
     Owner: {
       type: Schema.Types.ObjectId,
       required: true,
@@ -15,6 +16,7 @@ const mediaSchema = new Schema(
       required: true,
       enum: ["mediaPartner", "admin"],
     },
+    /////////////////////////////////////
     ScreenTitle: {
       type: String,
       required: [true, "Please Give Your Screen A Title"],
@@ -230,4 +232,10 @@ const mediaSchema = new Schema(
   },
   { timestamps: true }
 );
+
+mediaSchema.pre("updateOne", async function (next) {
+  this.options.runValidators = true;
+  next();
+});
+
 module.exports = mediaSchema;

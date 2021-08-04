@@ -8,6 +8,6 @@ const mediaUpdateController = require("../../controller/crud/media.update.contro
 const isUser = require("../../../auth/auth");
 
 app.post("/media-create", isUser, mediaCreateController.mediaCreate);
-app.put("/media-update", mediaUpdateController.updateMedia);
+app.put("/media-update", isUser, mediaUpdateController.updateMedia);
 
 module.exports = app;
