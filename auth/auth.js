@@ -3,7 +3,6 @@ const token = require("jsonwebtoken");
 module.exports = async (req, res, next) => {
   try {
     const jwt = req.cookies.token;
-    console.log(jwt);
     if (!jwt) {
       return res.json({ message: "Access failed", status: false });
     }
@@ -13,23 +12,23 @@ module.exports = async (req, res, next) => {
           message: "Authorization Failed",
           status: false,
         });
-      }
-      if (payload.isAdPartner && payload.adPartner) {
+      } else if (payload.isAdPartner && payload.adPartner) {
         req.adPartner = payload.adPartner;
         req.isAdPartner = true;
         req.role = "advertisingPartner";
+        req.user = payload.adPartner;
         next();
-      }
-      if (payload.isMediaPartner && payload.mediaPartner) {
+      } else if (payload.isMediaPartner && payload.mediaPartner) {
         req.mediaPartner = payload.mediaPartner;
         req.isMediaPartner = payload.isMediaPartner;
         req.role = "mediaPartner";
+        req.user = payload.mediaPartner;
         next();
-      }
-      if (payload.isAdmin && payload.admin) {
+      } else if (payload.isAdmin && payload.admin) {
         req.admin = payload.admin;
         req.isAdmin = payload.isAdmin;
         req.role = "admin";
+        req.user = payload.admin;
         next();
       } else {
         return res.json({ message: "User Not Verified", status: false });

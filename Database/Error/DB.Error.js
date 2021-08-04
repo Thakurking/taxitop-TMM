@@ -33,7 +33,7 @@ exports.mongooseErrorHandler = async (err) => {
       errors[properties.path] = properties.message;
     });
   }
-  if (err.message.includes("media vaidation failed")) {
+  if (err.message.includes("media validation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {
       errors[properties.path] = properties.message;
     });
