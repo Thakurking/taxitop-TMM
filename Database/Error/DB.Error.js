@@ -28,13 +28,18 @@ exports.mongooseErrorHandler = async (err) => {
       errors[properties.path] = properties.message;
     });
   }
-  if (err.message.includes("admin Vaidation failed")) {
+  if (err.message.includes("admin vaidation failed")) {
+    Object.values(err.errors).forEach(({ properties }) => {
+      errors[properties.path] = properties.message;
+    });
+  }
+  if (err.message.includes("media vaidation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {
       errors[properties.path] = properties.message;
     });
   }
   //Update Validation
-  if (err.message.includes("Validation failed")) {
+  if (err.message.includes("validation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {
       errors[properties.path] = properties.message;
     });

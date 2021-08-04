@@ -16,7 +16,7 @@ mediaRouter.post(
   mediaPartnerRegisterController.mediaPartnerRegister
 );
 mediaRouter.get(
-  "/verify-media-OTP/:OTP/:userID",
+  "/verify-OTP/:OTP/:userID",
   mediaPartnerOTPController.OTPVerification
 );
 mediaRouter.put("/change-password", mediaPartnerForgotPassword.forgotPassword);

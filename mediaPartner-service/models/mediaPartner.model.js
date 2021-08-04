@@ -25,10 +25,6 @@ const mediaPartnerSchema = new Schema(
       type: String,
       required: [true, "Give Your Business A Name"],
       unique: true,
-      validate: [
-        validator.isAlpha,
-        "Business Name Can Only Have Alphabet Characters",
-      ],
     },
     ConcernedPersonName: {
       type: String,
@@ -56,11 +52,11 @@ const mediaPartnerSchema = new Schema(
         ref: "media",
       },
     ],
-    GSTnumber: {
-      type: String,
-      unique: true,
-      required: [true, "Please Give GST Number"],
-    },
+    // GSTnumber: {
+    //   type: String,
+    //   unique: true,
+    //   required: [true, "Please Give GST Number"],
+    // },
   },
   { timestamps: true }
 );

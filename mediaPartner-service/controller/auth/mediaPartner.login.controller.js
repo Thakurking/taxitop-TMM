@@ -4,8 +4,9 @@ const MediaPartnerModel = require("../../../Database/MediaPartner.Service.DB/med
 
 exports.mediaPartnerLogin = async (req, res) => {
   try {
+    console.log(req.body);
     const { Email, Password } = req.body;
-    if (!Email || Password) {
+    if (!Email || !Password) {
       return res.json({
         message: "Please Enter Email And Password",
         status: false,
