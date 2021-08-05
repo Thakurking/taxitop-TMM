@@ -1,26 +1,20 @@
 const MediaModel = require("../../../Database/Media.Service.DB/mediaSchema");
-const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
 
-exports.deactivateMedia = async (req, res) => {
-  const mediaID = req.body.mediaID;
+exports.deleteMedia = async (req, res) => {
+  if (!req.admin || !req.mediaPartner) {
+    return res.json({ message: "Access Denied", status: false });
+  }
+  const { _id } = req.body;
+  if (!_id) {
+    return res.json({ message: "Please Select Media ID", status: false });
+  }
   try {
-    const deactiveMedia = await MediaModel.updateOne(
-      { _id: mediaID },
-      { $set: { Status: "D" } }
-    );
-    if (deactiveMedia) {
-      return res.json({
-        message: "Your Media Deactivated Successfully",
-        status: true,
-      });
+    const deleteMedia = await MediaModel.deleteOne({ _id: _id });
+    if (deleteMedia) {
+      return res.json({ message: "Media Deleted", status: true });
     }
   } catch (error) {
     console.log(error);
-    const errors = await mongooseErrorHandler(error);
-    if (errors) {
-      return res.json({ message: errors, status: false });
-    } else {
-      return res.json({ message: "Internal Server Error", status: false });
-    }
+    return res.json({ message: "Internal Server Error", status: false });
   }
 };
