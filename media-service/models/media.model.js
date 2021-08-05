@@ -125,21 +125,21 @@ const mediaSchema = new Schema(
           values: ["FlexibleOpen", "24/7Open"],
           message: "{VALUE} not supported",
         },
-        required: true,
+        required: [true, "Please Select Operating Hours"],
       },
       DayAndTime: [
         {
           day: {
             type: String,
-            required: true,
+            required: [true, "Please Select A Day"],
           },
           from: {
             type: String,
-            required: true,
+            required: [true, "Please Select"],
           },
           to: {
             type: String,
-            required: true,
+            required: [true, "Please Select"],
           },
         },
       ],
