@@ -85,6 +85,13 @@ const campaignSchema = new Schema({
     type: String,
     default: null,
   },
+  Medias: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "media",
+      required: true,
+    },
+  ],
 });
 // "Board Name",
 //   "Representative Image",
