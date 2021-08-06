@@ -17,7 +17,7 @@ const mediaSchema = new Schema(
       enum: ["mediaPartner", "admin"],
     },
     /////////////////////////////////////
-    ScreenTitle: {
+    MediaName: {
       type: String,
       required: [true, "Please Give Your Screen A Title"],
     },
@@ -79,6 +79,10 @@ const mediaSchema = new Schema(
     Country: {
       type: String,
       required: [true, "Please Enter Country"],
+    },
+    Venue: {
+      type: String,
+      required: true,
     },
     Phone: {
       type: String,
@@ -191,6 +195,22 @@ const mediaSchema = new Schema(
       },
       required: [true, "Please Select Screen Orientation"],
     },
+    VideoSupport: {
+      type: String,
+      enum: {
+        values: ["Yes", "No"],
+        message: "{VALUE} is Not Supported",
+      },
+      required: [true, "Please Select An Option"],
+    },
+    AudioSupport: {
+      type: String,
+      enum: {
+        values: ["Yes", "No"],
+        message: "{VALUE} is Not Supported",
+      },
+      required: [true, "Please Select An Option"],
+    },
     ScreenRestrictions: {
       type: String,
       required: [true, "Please Type Your Screen Restrictions"],
@@ -209,13 +229,11 @@ const mediaSchema = new Schema(
         required: true,
       },
     },
-    Images: [
-      {
-        data: Buffer,
-        type: String,
-        required: [true, "Please Select An Image"],
-      },
-    ],
+    Images: {
+      data: Buffer,
+      type: String,
+      required: [true, "Please Select An Image"],
+    },
     OtherScreenDescription: {
       type: String,
       default: "Screen For Rent",
