@@ -84,6 +84,14 @@ const mediaSchema = new Schema(
       type: String,
       required: true,
     },
+    Longitude: {
+      type: Number,
+      default: null,
+    },
+    Latitude: {
+      type: Number,
+      default: null,
+    },
     Phone: {
       type: String,
       required: [true, "Please Enter Phone Number"],
