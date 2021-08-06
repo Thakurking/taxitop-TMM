@@ -78,7 +78,7 @@ const campaignSchema = new Schema({
     ],
   },
   SpendLimit: {
-    type: String,
+    type: Number,
     required: [true, "Please Give Your Spend Limit"],
   },
   ArtWork: {
@@ -92,6 +92,10 @@ const campaignSchema = new Schema({
       default: null,
     },
   ],
+  CPP: {
+    type: Number,
+    default: null,
+  },
 });
 // "Board Name",
 //   "Representative Image",
