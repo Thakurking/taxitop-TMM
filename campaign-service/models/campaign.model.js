@@ -60,19 +60,21 @@ const campaignSchema = new Schema({
       },
       required: [true, "Please Choose Your Campaign Schedule"],
     },
-    Slots: [{
-      Day: {
-        type: String,
-        required: [true, "Please Select A Day"],
-      }
-      Start: {
-        type: String,
-        required: [true, "Please Select A Start Day"]
+    Slots: [
+      {
+        Day: {
+          type: String,
+          required: [true, "Please Select A Day"],
+        },
+        Start: {
+          type: String,
+          required: [true, "Please Select A Start Day"],
+        },
+        End: {
+          type: String,
+          required: [true, "Please Select A End Day"],
+        },
       },
-      End:{
-        type: String,
-        required: [true, "Please Select A End Day"]
-      }
-    }]
+    ],
   },
 });
