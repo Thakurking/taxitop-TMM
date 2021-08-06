@@ -219,6 +219,14 @@ const mediaSchema = new Schema(
       },
       required: [true, "Please Select An Option"],
     },
+    MaxAdLength: {
+      type: Number,
+      required: [true, "Enter Maximum Ad Length"],
+    },
+    MinAdLength: {
+      type: Number,
+      required: [true, "Enter Minimum Ad Length"],
+    },
     ScreenRestrictions: {
       type: String,
       required: [true, "Please Type Your Screen Restrictions"],
