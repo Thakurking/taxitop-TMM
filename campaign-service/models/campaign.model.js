@@ -89,7 +89,7 @@ const campaignSchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       ref: "media",
-      required: true,
+      default: null,
     },
   ],
 });
