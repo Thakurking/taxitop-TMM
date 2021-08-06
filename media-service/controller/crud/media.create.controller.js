@@ -8,6 +8,7 @@ exports.mediaCreate = async (req, res) => {
       console.log(mediaData);
       mediaData.Owner = req.user;
       mediaData.onModel = req.role;
+      console.log(await MediaModel.schema.path("BusinessName"));
       const saveMedia = await MediaModel.create(mediaData);
       console.log(saveMedia);
       if (saveMedia) {

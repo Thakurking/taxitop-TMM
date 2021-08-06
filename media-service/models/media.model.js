@@ -257,7 +257,7 @@ const mediaSchema = new Schema(
     Email: {
       type: String,
       required: [true, "Please Give Email"],
-      validate: [validator.isEmail, "Please Give Correct Email"],
+      validate: [validator.isEmail, "Wrong Email"],
     },
     Status: {
       type: String,
