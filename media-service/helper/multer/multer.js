@@ -2,13 +2,15 @@ const multer = require("multer");
 const shortID = require("shortid");
 const fs = require("fs");
 
-const DIR = "public/mediaImage";
+const DIR = "Public/mediaImage";
 const storage = multer.diskStorage({
-  destination: (req, file, db) => {
+  destination: (req, file, cb) => {
     if (!fs.existsSync(DIR)) {
-      fs.mkdir(DIR);
+      fs.mkdir(DIR, { recursive: true }, (err) => {
+        if (err) throw err;
+      });
     }
-    cb(null);
+    cb(null, DIR);
   },
   filename: (req, file, cb) => {
     const filename = file.originalname.toLocaleLowerCase().split(" ").join("-");
@@ -36,7 +38,7 @@ const upload = multer({
     }
   },
   limits: {
-    fileSize: 2 * 1024 * 1024 * 1024,
+    fileSize: 1024 * 1024 * 5,
   },
 });
 

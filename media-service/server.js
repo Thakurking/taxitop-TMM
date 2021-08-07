@@ -37,6 +37,7 @@ app.use(cors(corsOptionsDelegate, { credentials: true }));
 /******************************/
 
 /**********MODULES SETUP**********/
+app.use("/Public/mediaImage", express.static("Public/mediaImage"));
 app.use(helmet());
 app.use(cookieParser());
 app.use(morgan("dev"));

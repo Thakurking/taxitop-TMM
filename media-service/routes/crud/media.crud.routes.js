@@ -7,9 +7,16 @@ const mediaUpdateController = require("../../controller/crud/media.update.contro
 const mediaDeActivateController = require("../../controller/crud/media.deActivate.controller");
 const mediaDeleteConntroller = require("../../controller/crud/media.delete.controller");
 
+const upload = require("../../helper/multer/multer");
+
 const isUser = require("../../../auth/auth");
 
-app.post("/media-create", isUser, mediaCreateController.mediaCreate);
+app.post(
+  "/media-create",
+//   isUser,
+  upload.single("mediaImage"),
+  mediaCreateController.mediaCreate
+);
 app.put("/media-update", isUser, mediaUpdateController.updateMedia);
 app.put("/media-deactivate", isUser, mediaDeActivateController.deactivateMedia);
 app.delete("/media-delete", isUser, mediaDeleteConntroller.deleteMedia);
