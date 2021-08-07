@@ -2,7 +2,7 @@ const multer = require("multer");
 const shortID = require("shortid");
 const fs = require("fs");
 
-const DIR = "public/images";
+const DIR = "public/mediaImage";
 const storage = multer.diskStorage({
   destination: (req, file, db) => {
     if (!fs.existsSync(DIR)) {
