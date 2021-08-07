@@ -38,6 +38,7 @@ app.use(cors(corsOptionsDelegate, { credentials: true }));
 /******************************/
 
 /**********MODULES SETUP**********/
+app.use("/Public/campaignImages", express.static("Public/campaignImages"));
 app.use(helmet());
 app.use(cookieParser());
 app.use(morgan("dev"));
