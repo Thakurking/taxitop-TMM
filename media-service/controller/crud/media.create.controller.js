@@ -3,13 +3,13 @@ const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
 
 exports.mediaCreate = async (req, res) => {
   const mediaData = req.body;
-  console.log(req.file.path);
   try {
     if (req.mediaPartner || req.admin) {
       console.log(mediaData);
       mediaData.Owner = req.user;
       mediaData.onModel = req.role;
-      mediaData.Image = req.file.path;
+      // mediaData.Image = req.file.path
+      // console.log(await MediaModel.schema.path("BusinessName"));
       const saveMedia = await MediaModel.create(mediaData);
       console.log(saveMedia);
       if (saveMedia) {

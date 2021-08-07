@@ -80,10 +80,6 @@ const mediaSchema = new Schema(
       type: String,
       required: [true, "Please Enter Country"],
     },
-    Venue: {
-      type: String,
-      required: true,
-    },
     Longitude: {
       type: Number,
       default: null,
@@ -245,10 +241,10 @@ const mediaSchema = new Schema(
         required: true,
       },
     },
-    Image: {
-      type: String,
-      required: [true, "Please Select An Image"],
-    },
+    // Image: {
+    //   type: String,
+    //   required: [true, "Please Select An Image"],
+    // },
     OtherScreenDescription: {
       type: String,
       default: "Screen For Rent",
