@@ -245,7 +245,7 @@ const mediaSchema = new Schema(
         required: true,
       },
     },
-    Images: {
+    Image: {
       type: String,
       required: [true, "Please Select An Image"],
     },

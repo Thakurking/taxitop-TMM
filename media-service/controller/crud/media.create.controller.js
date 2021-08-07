@@ -2,44 +2,44 @@ const MediaModel = require("../../../Database/Media.Service.DB/mediaSchema");
 const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
 
 exports.mediaCreate = async (req, res) => {
-  // const mediaData = req.body;
-  console.log(req.file.path)
-  // try {
-  //   if (req.mediaPartner || req.admin) {
-  //     console.log(mediaData);
-  //     mediaData.Owner = req.user;
-  //     mediaData.onModel = req.role;
-  //     console.log(await MediaModel.schema.path("BusinessName"));
-  //     const saveMedia = await MediaModel.create(mediaData);
-  //     console.log(saveMedia);
-  //     if (saveMedia) {
-  //       return res.json({
-  //         message: "Your Media Saved Successfully",
-  //         status: true,
-  //       });
-  //     }
-  //   } else {
-  //     return res.json({ message: "Access Denied", status: false });
-  //   }
-  //   /**
-  //    * media owner reference to mediaPartner model example
-  //    */
-  //   // const findMediaOwner = await MediaModel.findOne({
-  //   //   _id: "610a461accffc3277e07aa05",
-  //   // }).populate("Owner", "Name Email", AdminModel);
-  //   // console.log(findMediaOwner.Owner);
-  //   // const findMedia = await MediaModel.findOne({
-  //   //   _id: findMediaOwner.Owner.Media,
-  //   // });
-  //   // console.log(findMedia);
-  // } catch (error) {
-  //   console.log(error);
-  //   console.log(error.errors);
-  //   const errors = await mongooseErrorHandler(error);
-  //   if (errors) {
-  //     return res.json({ errors });
-  //   } else {
-  //     return res.json({ message: "Internal Server Error", status: false });
-  //   }
-  // }
+  const mediaData = req.body;
+  console.log(req.file.path);
+  try {
+    if (req.mediaPartner || req.admin) {
+      console.log(mediaData);
+      mediaData.Owner = req.user;
+      mediaData.onModel = req.role;
+      mediaData.Image = req.file.path;
+      const saveMedia = await MediaModel.create(mediaData);
+      console.log(saveMedia);
+      if (saveMedia) {
+        return res.json({
+          message: "Your Media Saved Successfully",
+          status: true,
+        });
+      }
+    } else {
+      return res.json({ message: "Access Denied", status: false });
+    }
+    /**
+     * media owner reference to mediaPartner model example
+     */
+    // const findMediaOwner = await MediaModel.findOne({
+    //   _id: "610a461accffc3277e07aa05",
+    // }).populate("Owner", "Name Email", AdminModel);
+    // console.log(findMediaOwner.Owner);
+    // const findMedia = await MediaModel.findOne({
+    //   _id: findMediaOwner.Owner.Media,
+    // });
+    // console.log(findMedia);
+  } catch (error) {
+    console.log(error);
+    console.log(error.errors);
+    const errors = await mongooseErrorHandler(error);
+    if (errors) {
+      return res.json({ errors });
+    } else {
+      return res.json({ message: "Internal Server Error", status: false });
+    }
+  }
 };
