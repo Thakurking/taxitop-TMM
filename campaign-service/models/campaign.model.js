@@ -7,17 +7,6 @@ const campaignSchema = new Schema({
     type: String,
     required: [true, "Please Give Your Campaign A Name"],
   },
-  //   CampaignDate: {
-  //     required: true,
-  //     Start: {
-  //       type: String,
-  //       required: true,
-  //     },
-  //     End: {
-  //       type: String,
-  //       required: true,
-  //     },
-  //   },
   CampaignDate: {
     Start: {
       required: [true, "Please Select Date"],
