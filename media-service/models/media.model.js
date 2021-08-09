@@ -260,7 +260,6 @@ const mediaSchema = new Schema(
         values: ["A", "D"],
         message: "{VALUE} is Not Supported",
       },
-      required: true,
       default: "A",
     },
   },

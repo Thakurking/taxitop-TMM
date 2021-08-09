@@ -13,7 +13,7 @@ const isUser = require("../../../auth/auth");
 
 app.post(
   "/media-create",
-//   isUser,
+  isUser,
   upload.single("mediaImage"),
   mediaCreateController.mediaCreate
 );

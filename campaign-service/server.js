@@ -44,8 +44,8 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 /*********************************/
 
-// const mediaRouter = require("./routes/crud/media.crud.routes");
-// app.use("/media", mediaRouter);
+const campaignRouter = require("./routes/crud/campaign.crud.routes");
+app.use("/campaign", campaignRouter);
 
 /**********HTTP-ERROR**********/
 app.use(async (req, res, next) => {
@@ -74,7 +74,7 @@ const server = app.listen(PORT, () => {
         margin: 0,
         borderStyle: "bold",
         borderColor: "yellowBright",
-        backgroundColor: "blackBright",
+        backgroundColor: "red",
       })
     );
   });
