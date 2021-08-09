@@ -38,6 +38,11 @@ exports.mongooseErrorHandler = async (err) => {
       errors[properties.path] = properties.message;
     });
   }
+  if (err.message.includes("campaign validation failed")) {
+    Object.values(err.errors).forEach(({ properties }) => {
+      errors[properties.path] = properties.message;
+    });
+  }
   //Update Validation
   if (err.message.includes("Validation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {

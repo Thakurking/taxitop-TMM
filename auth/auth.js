@@ -15,7 +15,7 @@ module.exports = async (req, res, next) => {
       } else if (payload.isAdPartner && payload.adPartner) {
         req.adPartner = payload.adPartner;
         req.isAdPartner = true;
-        req.role = "advertisingPartner";
+        req.role = "advertismentPartner";
         req.user = payload.adPartner;
         next();
       } else if (payload.isMediaPartner && payload.mediaPartner) {

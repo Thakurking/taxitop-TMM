@@ -4,8 +4,19 @@ const Schema = mongoose.Schema;
 
 const campaignSchema = new Schema(
   {
+    Owner: {
+      type: Schema.Types.ObjectId,
+      required: true,
+      refPath: "onModel",
+    },
+    onModel: {
+      type: String,
+      required: true,
+      enum: ["advertismentPartner", "admin"],
+    },
     CampaignName: {
       type: String,
+      unique: true,
       required: [true, "Please Give Your Campaign A Name"],
     },
     CampaignDate: {
