@@ -34,7 +34,7 @@ exports.mediaCreate = async (req, res) => {
       console.log(error.errors);
       const errors = await mongooseErrorHandler(error);
       if (errors) {
-        return res.json({ errors });
+        return res.json({ errors, status: false });
       } else {
         return res.json({ message: "Internal Server Error", status: false });
       }

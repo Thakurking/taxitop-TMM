@@ -106,4 +106,9 @@ const campaignSchema = new Schema(
   { timestamps: true }
 );
 
+mediaSchema.pre("updateOne", async function (next) {
+  this.options.runValidators = true;
+  next();
+});
+
 module.exports = campaignSchema;

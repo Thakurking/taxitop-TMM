@@ -20,7 +20,7 @@ exports.createCampaign = async (req, res) => {
       const errors = await mongooseErrorHandler(error);
       console.log(errors);
       if (errors) {
-        return res.json({ errors });
+        return res.json({ errors, status: false });
       } else {
         return res.json({
           message: "Internal Server Error Please Try Again",
