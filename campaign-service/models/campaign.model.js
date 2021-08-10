@@ -97,6 +97,11 @@ const campaignSchema = new Schema(
       type: Number,
       default: null,
     },
+    Status: {
+      type: String,
+      required: true,
+      default: "A",
+    },
   },
   { timestamps: true }
 );

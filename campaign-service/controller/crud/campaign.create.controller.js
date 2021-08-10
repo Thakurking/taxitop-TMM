@@ -6,7 +6,7 @@ exports.createCampaign = async (req, res) => {
     const campaignData = req.body;
     try {
       campaignData.Owner = req.user;
-      campaignData.onModel = req.role
+      campaignData.onModel = req.role;
       const saveCampaign = await CampaignModel.create({ campaignData });
       console.log(saveCampaign);
       if (saveCampaign) {
