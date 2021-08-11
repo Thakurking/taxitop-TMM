@@ -2,6 +2,7 @@ const CampaignModel = require("../../../Database/Campaign.Service.DB/campaignSch
 const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
 
 exports.createCampaign = async (req, res) => {
+  console.log("hii");
   if (req.adPartner && req.admin) {
     const campaignData = req.body;
     try {

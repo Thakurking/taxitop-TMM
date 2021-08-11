@@ -21,7 +21,7 @@ const campaignSchema = new Schema(
     },
     CampaignDate: {
       Start: {
-        required: [true, "Please Select Date"],
+        // required: [true, "Please Select Date"],
         Year: {
           type: String,
           required: [true, "Please Choose Start Year"],
@@ -36,7 +36,7 @@ const campaignSchema = new Schema(
         },
       },
       Finish: {
-        required: [true, "Please Select Date"],
+        // required: [true, "Please Select Date"],
         Year: {
           type: String,
           required: [true, "Please Choose Finish Year"],
@@ -52,7 +52,7 @@ const campaignSchema = new Schema(
       },
     },
     CampaignSchedule: {
-      required: [true, "Please Enter Campaign Schedule"],
+      // required: [true, "Please Enter Campaign Schedule"],
       ScheduleType: {
         type: String,
         enum: {
@@ -106,7 +106,7 @@ const campaignSchema = new Schema(
   { timestamps: true }
 );
 
-mediaSchema.pre("updateOne", async function (next) {
+campaignSchema.pre("updateOne", async function (next) {
   this.options.runValidators = true;
   next();
 });
