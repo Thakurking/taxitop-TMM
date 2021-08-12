@@ -28,6 +28,6 @@ exports.forgotPassword = async (req, res) => {
   } catch (error) {
     console.log(error);
     const errors = await mongooseErrorHandler(error);
-    return res.json(errors);
+    return res.json({ errors, status: false });
   }
 };

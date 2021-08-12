@@ -6,7 +6,6 @@ const campaignCreateController = require("../../controller/crud/campaign.create.
 const campaignDeactivateController = require("../../controller/crud/campaign.deActivate.controller");
 const campaignUpdateController = require("../../controller/crud/campaign.update.controller");
 const campaignDeleteController = require("../../controller/crud/campaign.delete.controller");
-const campaignAddToCartController = require("../../controller/crud/campaign.addToCart.controller");
 
 const isUser = require("../../../auth/auth");
 
@@ -17,6 +16,6 @@ app.put(
 );
 app.put("/campaign-update", campaignUpdateController.updateCampaign);
 app.delete("/campaign-delete", campaignDeleteController.deleteCampaign);
-app.post("/campaign-addToCart", campaignAddToCartController.addToCart);
+
 
 module.exports = app;

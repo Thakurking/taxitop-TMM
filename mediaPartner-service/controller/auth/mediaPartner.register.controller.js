@@ -55,6 +55,10 @@ exports.mediaPartnerRegister = async (req, res) => {
     console.log(error);
     const errors = await mongooseErrorHandler(error);
     console.log(errors);
-    return res.json(errors);
+    if(errors){
+      return res.json({ errors, status: false });
+    }else{
+      return res.json({message: "Internal Server Error", status: false})
+    }
   }
 };

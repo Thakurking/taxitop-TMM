@@ -24,6 +24,7 @@ const allowlist = [
   "http://localhost:5004",
   "http://localhost:5005",
   "http://localhost:5006",
+  "http://localhost:5007",
 ];
 const corsOptionsDelegate = function (req, callback) {
   var corsOptions;
