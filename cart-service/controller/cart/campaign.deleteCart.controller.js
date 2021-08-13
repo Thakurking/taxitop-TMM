@@ -17,7 +17,7 @@ exports.deleteCart = async (req, res) => {
     }
   } else {
     return res.json({
-      message: "Internal Server Please Try Again",
+      message: "Internal Server Error Please Try Again",
       status: false,
     });
   }
