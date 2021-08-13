@@ -57,6 +57,24 @@ app.use((req, res, next) => {
 });
 /******************************/
 
+const main = require("./mediaBooking");
+main()
+
+// const NRP = require("node-redis-pubsub");
+
+// const config = {
+//   port: 6379,
+//   host: "127.0.0.1",
+//   scope: "TaxiTop_Microservices",
+// };
+
+// const nrp = new NRP(config);
+
+// nrp.on("BOOKING", (data) => {
+//     console.log(data);
+// });
+
+
 /**********SERVER PORT SETUP**********/
 const PORT = process.env.PORT || 5008;
 

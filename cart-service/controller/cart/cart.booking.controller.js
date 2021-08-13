@@ -1,10 +1,5 @@
 const NRP = require("node-redis-pubsub");
 
-const nodemailer = require("nodemailer");
-
-const AdvertismentPartnerModel = require("../../../Database/AdvertismentPartner.Service.DB/advertismentPartnerSchema");
-const CartModel = require("../../../Database/Cart.Service.DB/cartSchema");
-
 const config = {
   post: 6379,
   host: "127.0.0.1",
@@ -17,7 +12,11 @@ exports.bookMedia = async (req, res) => {
     console.log(nrp);
     const adData = req.body;
     const adPartner = req.adPartner;
-    nrp.emit("BOOKING", { adPartner: adPartner, adData: adData });
+    console.log(adData);
+    nrp.emit("BOOKING", { adData: adData, adPartner: adPartner });
+    nrp.on("BOOKING", (data) => {
+      console.log(data);
+    });
   }
   // if (req.adPartner && req.isAdPartner) {
   //   try {
