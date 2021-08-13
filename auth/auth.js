@@ -1,12 +1,17 @@
 const token = require("jsonwebtoken");
+require("dotenv").config();
 
 module.exports = async (req, res, next) => {
   try {
+    console.log("hii");
     const jwt = req.cookies.token;
+    console.log(jwt)
     if (!jwt) {
       return res.json({ message: "Access failed", status: false });
     }
+    console.log(process.env.JWT_SECRET);
     token.verify(jwt, process.env.JWT_SECRET, async (err, payload) => {
+      console.log(err);
       if (err) {
         return res.json({
           message: "Authorization Failed",

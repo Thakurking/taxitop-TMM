@@ -5,6 +5,7 @@ const AdvertismentPartnerModel = require("../../../Database/AdvertismentPartner.
 exports.advertismentPartnerLogin = async (req, res) => {
   try {
     const { Email, Password } = req.body;
+    console.log(Email, Password);
     if (!Email || !Password) {
       return res.json({
         message: "Please Provide Email and Password",
