@@ -10,11 +10,14 @@ exports.bookMedia = async (req, res) => {
   console.log(req.adPartner);
   if (req.adPartner && req.isAdPartner) {
     console.log(nrp);
-    const adData = req.body;
+    const mediaData = req.body;
     const adPartner = req.adPartner;
-    console.log(adData);
-    nrp.emit("BOOKING", { adData: adData, adPartner: adPartner });
-    nrp.on("BOOKING", (data) => {
+    console.log(mediaData);
+    nrp.emit("BOOKING", { mediaData, adPartner });
+    nrp.on("BOOKING_SUCC", (data) => {
+      console.log(data);
+    });
+    nrp.on("BOOKING_ERR", (data) => {
       console.log(data);
     });
   }

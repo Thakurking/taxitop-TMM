@@ -8,7 +8,7 @@ const cartBookingController = require("../../controller/cart/cart.booking.contro
 
 const isUser = require("../../../auth/auth");
 
-app.post("/addToCart", addToCartController.addToCart);
+app.post("/addToCart", isUser, addToCartController.addToCart);
 app.delete("/deleteCart", deleteCartController.deleteCart);
 app.post("/book-media-cart", isUser, cartBookingController.bookMedia);
 
