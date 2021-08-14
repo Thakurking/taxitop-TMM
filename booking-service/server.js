@@ -92,7 +92,7 @@ nrp.on("BOOKING", async (data) => {
     });
     const mailOption = {
       from: process.env.user,
-      to: "riteshkumar3310@gmail.com",
+      to: Partner.Email,
       subject: `New Booking`,
       html: `<h1>Advertiser Partner Details</h1><p>${Partner}</p><h1>Media Detail</h1><p>${JSON.stringify(
         data.mediaData
@@ -107,7 +107,7 @@ nrp.on("BOOKING", async (data) => {
     );
     console.log(updateCart);
     if (mail && updateCart) {
-      nrp.emit("BOOKING_SUCC", "Thank Your For Your Booking Please Try Again");
+      nrp.emit("BOOKING_SUCC", "Thank You For Your Booking");
       return;
     } else {
       nrp.emit("BOOKING_ERR", "Something Went Wrong Please Try Again");
