@@ -1,17 +1,17 @@
-const NRP = require("node-redis-pubsub");
+// const NRP = require("node-redis-pubsub");
 
 // const AdvertismentPartnerModel = require("../Database/AdvertismentPartner.Service.DB/advertismentPartnerSchema");
 // const CartModel = require("../Database/Cart.Service.DB/cartSchema");
 
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 
-const config = {
-  port: 6379,
-  host: "127.0.0.1",
-  scope: "TaxiTop_Microservices",
-};
+// const config = {
+//   port: 6379,
+//   host: "127.0.0.1",
+//   scope: "TaxiTop_Microservices",
+// };
 
-const nrp = new NRP(config);
+// const nrp = new NRP(config);
 
 // async function main() {
   // nrp.on("BOOKING", async (data) => {

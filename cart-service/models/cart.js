@@ -7,26 +7,48 @@ const cartSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "advertismentPartner",
     },
-    Media_ID: {
-      type: Schema.Types.ObjectId,
-      ref: "media",
+    Medias: {
+      media_id: {
+        type: String,
+        required: true,
+      },
+      mediaName: {
+        type: String,
+        required: true,
+      },
+      mediaPrice: {
+        type: String,
+        required: true,
+      },
+      mediaAddress: {
+        type: String,
+        required: true,
+      },
+      mediaOwner: {
+        type: String,
+        required: true,
+      },
     },
-    MediaName: {
-      type: String,
-      reuqired: true,
-    },
-    Price: {
-      type: Number,
-      required: true,
-    },
+    // Media_ID: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "media",
+    // },
+    // MediaName: {
+    //   type: String,
+    //   reuqired: true,
+    // },
+    // Price: {
+    //   type: Number,
+    //   required: true,
+    // },
     Status: {
       type: String,
       default: "A",
     },
-    ModifiedOn: {
-      type: Date,
-      default: Date.now,
-    },
+    // ModifiedOn: {
+    //   type: Date,
+    //   default: Date.now,
+    // },
   },
   { timestamps: true }
 );

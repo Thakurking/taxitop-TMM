@@ -57,9 +57,6 @@ app.use((req, res, next) => {
 });
 /******************************/
 
-// const main = require("./mediaBooking");
-// main()
-
 const AdvertismentPartnerModel = require("../Database/AdvertismentPartner.Service.DB/advertismentPartnerSchema");
 const CartModel = require("../Database/Cart.Service.DB/cartSchema");
 
@@ -107,7 +104,10 @@ nrp.on("BOOKING", async (data) => {
     );
     console.log(updateCart);
     if (mail && updateCart) {
-      nrp.emit("BOOKING_SUCC", "Thank You For Your Booking");
+      nrp.emit(
+        "BOOKING_SUCC",
+        "Thank You For Your Booking Will Contact You Soon"
+      );
       return;
     } else {
       nrp.emit("BOOKING_ERR", "Something Went Wrong Please Try Again");
@@ -117,6 +117,7 @@ nrp.on("BOOKING", async (data) => {
     console.log(error);
   }
 });
+
 /**********SERVER PORT SETUP**********/
 const PORT = process.env.PORT || 5008;
 
