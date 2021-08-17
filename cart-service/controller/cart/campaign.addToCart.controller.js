@@ -1,18 +1,17 @@
 const CartModel = require("../../../Database/Cart.Service.DB/cartSchema");
-const { mongooseErrorHandler } = require("../../../Database/Error/DB.Error");
-exports.addToCart = async (req, res, next) => {
   console.log(req.adPartner, req.user);
   if (req.adPartner) {
     try {
       const cart = req.body;
       cart.User_ID = req.user;
       const isCart = await CartModel.findOne({ User_ID: req.adPartner });
-      if(isCart){
+      if (isCart) {
         const updateCart = await CartModel.updateOne(
           { User_ID: req.adPartner },
           { $push: { cart } },
           { multi: true }
         );
+        console.log(updateCart);
       }
       const saveCart = await CartModel.create(cart);
       if (saveCart) {
