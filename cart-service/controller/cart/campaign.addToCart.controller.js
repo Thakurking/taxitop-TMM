@@ -1,4 +1,5 @@
 const CartModel = require("../../../Database/Cart.Service.DB/cartSchema");
+exports.addToCart = async (req, res) => {
   console.log(req.adPartner, req.user);
   if (req.adPartner) {
     try {
