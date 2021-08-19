@@ -43,7 +43,8 @@ app.use(morgan("dev"));
 /*********************************/
 
 const advertiserRouter = require("./routes/advertiser-auth/adPartner.auth.routes");
-app.use("/advertiserPartner", advertiserRouter);
+const bookingsRouter = require("./routes/booking/adPartner.booking.routes");
+app.use("/advertiserPartner", advertiserRouter, bookingsRouter);
 
 /**********HTTP-ERROR**********/
 app.use(async (req, res, next) => {
