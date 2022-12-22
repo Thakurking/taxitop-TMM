@@ -21,7 +21,7 @@
     "figlet": "^1.5.0",
     "helmet": "^4.6.0",
     "http-errors": "^1.7.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "log-symbols": "^5.0.0",
     "mongoose": "^5.12.14",
     "morgan": "^1.10.0",
