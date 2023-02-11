@@ -22,7 +22,7 @@
     "log-symbols": "^5.0.0",
     "mongoose": "^5.13.5",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.20",
     "validator": "^13.6.0"
   }
 }
